@@ -11,10 +11,10 @@ Audio playback uses [`mpv`](http://mpv.io/). Curseradio requires `python3` and t
 
 Key(s) | Command
 -------|--------
-<kbd>↑</kbd>, <kbd>↓</kbd> | navigate
-<kbd>PgUp</kbd>, <kbd>PgDn</kbd> | navigate quickly
-<kbd>Home</kbd>, <kbd>End</kbd> | to top/bottom
+<kbd>↑</kbd><kbd>k</kbd>, <kbd>↓</kbd><kbd>j</kbd> | navigate
+<kbd>PgUp</kbd><kbd>K</kbd>, <kbd>PgDn</kbd><kbd>J</kbd> | navigate quickly
+<kbd>Home</kbd><kbd>g</kbd>, <kbd>End</kbd><kbd>G</kbd> | to top/bottom
 <kbd>Enter</kbd> | open/close folders, play stream
-<kbd>k</kbd> | stop playing stream
+<kbd>s</kbd> | stop playing stream
 <kbd>q</kbd> | quit
 <kbd>f</kbd> | toggle favourite

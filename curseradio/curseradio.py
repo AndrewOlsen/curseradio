@@ -329,19 +329,19 @@ class OPMLBrowser:
         """
         while True:
             ch = self.screen.getch()
-            if ch == curses.KEY_UP:
+            if ch == curses.KEY_UP or ch == ord('k'):
                 self.move(rel=-1)
             elif ch == curses.KEY_RESIZE:
                 self.maxy, self.maxx = self.screen.getmaxyx()
-            elif ch == curses.KEY_DOWN:
+            elif ch == curses.KEY_DOWN or ch == ord('j'):
                 self.move(rel=1)
-            elif ch == curses.KEY_HOME:
+            elif ch == curses.KEY_HOME or ch == ord('g'):
                 self.move(to="start")
-            elif ch == curses.KEY_END:
+            elif ch == curses.KEY_END or ch == ord('G'):
                 self.move(to="end")
-            elif ch == curses.KEY_PPAGE:  # page up
+            elif ch == curses.KEY_PPAGE or ch == ord('K'):  # page up
                 self.move(rel=-self.maxy)
-            elif ch == curses.KEY_NPAGE:  # page down
+            elif ch == curses.KEY_NPAGE or ch == ord('J'):  # page down
                 self.move(rel=self.maxy)
             elif ch == curses.KEY_ENTER or ch == ord('\n'):
                 for msg in self.selected.activate():
@@ -364,7 +364,7 @@ class OPMLBrowser:
                     self.child.wait()
                 self.save_favourites()
                 return
-            elif ch == ord('k'):
+            elif ch == ord('s'):
                 if self.child is not None:
                     self.child.terminate()
                     self.child.wait()
